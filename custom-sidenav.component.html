@@ -1,0 +1,13 @@
+<div class="sidenav-header">
+  <img src="" [width]="profilePicSize()" [height]="profilePicSize()" alt="">
+  <div class="header-text" [class.hide-header-text]="sidenavCollapsed()" >
+    <h2>Hello</h2>
+    <p>Ousmane Vincent Dione</p>
+  </div>
+</div>
+<mat-nav-list>
+  @for (item of menuItems(); track item.label) {
+     <app-menu-item [item]="item" [collapsed]="sidenavCollapsed()" ></app-menu-item>
+  }
+
+</mat-nav-list>
